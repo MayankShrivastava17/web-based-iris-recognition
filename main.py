@@ -24,6 +24,6 @@ def imageReconization(sepal_length, sepal_width, petal_length, petal_width):
         return'viginica.jpg'
 
 
-iface = gr.Interface(fn=imageReconization, inputs=[gr.inputs.Number(), gr.inputs.Number(), gr.inputs.Number(), gr.inputs.Number()], outputs=[gr.outputs.Image(label = "IRIS")], title=title)
+iface = gr.Interface(fn=imageReconization, inputs=[gr.inputs.Slider(0, 10, 0.1, 0), gr.inputs.Slider(0, 10, 0.1, 0), gr.inputs.Slider(0, 10, 0.1, 0), gr.inputs.Slider(0, 10, 0.1, 0)], outputs=[gr.outputs.Image(label = "IRIS")], title=title)
 
 iface.launch(share=True)
